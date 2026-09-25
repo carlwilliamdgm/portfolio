@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #07080a;
+  color: #f3f4f6;
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07080a;
+}
+::-webkit-scrollbar-thumb {
+  background: #27211b;
+  border-radius: 9999px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #78350f;
+}
+
+/* Blueprint Grid with warm amber tint */
+.bg-blueprint-grid {
+  background-image: 
+    linear-gradient(to right, rgba(245, 158, 11, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 158, 11, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Glass Bento Card with warm copper highlights */
+.glass-bento {
+  background: linear-gradient(135deg, rgba(20, 18, 16, 0.75) 0%, rgba(10, 11, 14, 0.85) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-bento:hover {
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 14px 40px -10px rgba(226, 135, 67, 0.18), 0 0 1px 1px rgba(245, 158, 11, 0.2);
+}
+
+/* Chrome Liquid Text Gradient */
+.text-chrome {
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 35%, #94a3b8 50%, #fef3c7 70%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Copper Warm Accent Text Gradient */
+.text-copper {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #e28743 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tech schematic crosshairs in copper */
+.corner-crosshair {
+  position: relative;
+}
+.corner-crosshair::before,
+.corner-crosshair::after {
+  content: '+';
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(245, 158, 11, 0.4);
+  pointer-events: none;
+}
+.corner-crosshair::before { top: 6px; left: 8px; }
+.corner-crosshair::after { bottom: 6px; right: 8px; }
+
+/* Glowing copper energy ribbons */
+.copper-glow {
+  position: absolute;
+  filter: blur(120px);
+  opacity: 0.16;
+  pointer-events: none;
+  border-radius: 50%;
+}
